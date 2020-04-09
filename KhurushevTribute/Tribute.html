@@ -1,14 +1,20 @@
 <style>
 
-  #caption {
+  #img-caption {
     font-size: 10px;
+  }
+
+  @media (max-height: 800px) {
+    #main {
+      font-size: 10px;
+    }
   }
 
   #main {
     color: black;
     background: white;
     height: auto;
-    display: flex;
+    display: grid;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -24,51 +30,58 @@
     text-align: center;
   }
   #image {
-    size: 200px 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    height: 250px;
+    width: 450px;
   }
 
   #img-div {
-    width: 50%;
-    height: 210px;
+    min-height: 100px;
+    justify-self: center;
   }
 
   #box-3 {
     text-align: center;
-    width: 50%;
-    height: 50px;
+    min-height: 100px;
+    justify-self: center;
   }
+
   #tribute-info {
-    width: 50%;
-    height: 380px;
+    height: auto;
     display: grid;
     grid-row: auto;
     grid-template-rows: auto;
     text-align: start;
-
+    justify-self: center;
+    align-items: center;
     font-size: 10px;
 
   }
-  #box-5 {
-    width: 50%;
-    height: 100px;
-    font-style: italic;
-    font-size: 10px;
-  }
-  #box-7 {
-    width: 90%;
-    height: 100px;
-  }
+
   #box-6 {
-    height: 140px;
+    min-height: 100px;
+    height: auto;
+    font-size: 15px;
+    justify-self: start;
+  }
+
+  #box-5 {
+    min-height: 100px;
+    height: auto;
+    font-style: italic;
+    font-size: 15px;
+    justify-self: center;
   }
 
   #title {
     text-align: center;
     font-style: normal;
     font-family: georgia;
+    justify-self: center;
+  }
+
+  #img-caption {
+
   }
 
   #divider {
@@ -80,13 +93,25 @@
   }
 </style>
 
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!--
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding!
+
+- The freeCodeCamp Team
+
+-->
+
 <div id="main">
   <div id="box-1">
     <h1 id="title">Nikita Khurushev</h1>
   </div>
   <figure id="img-div">
-    <img src="Khrushchev.jpg" alt="" id="image"></img>
-    <figcaption id="caption">Khrushchev's polices may be flawed, but his rule saw through the Cold War years.</figcaption>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Hru%C5%A1%C4%87ov1.JPG" alt="" id="image"></img>
+    <figcaption id="img-caption">Khrushchev's polices may be flawed, but his rule saw through the Cold War years.</figcaption>
   </figure>
   <div id="box-3">
     <p>
@@ -129,7 +154,7 @@
       </ul>
   </nav>
   </section>
-  <div id="box-5">
+  <div id="box-6">
     <p>
     "Freedom" in capitalist countries exists only for those who possess money and who consequently hold power."
     </p>
@@ -137,14 +162,14 @@
     <cite>-- Nikita Khuruschev</cite>
   </div>
 
-  <div id="box-5">
+  <div id="box-6">
     <p>
       "Mr. Khrushchev opened the doors and windows of a petrified structure. He let in fresh air and fresh ideas, producing changes which time already has shown are irreversible and fundamental"
     </p>
     <cite>-- New York Times on the death of Mr. Khrushchev</cite>
   </div>
 
-  <div id="box-6">
+  <div id="box-5">
     <strong>
     If you have time, let's read more about this illustrious soviet soldier on his <a href="https://en.wikipedia.org/wiki/Nikita_Khrushchev" target="_blank" id="tribute-link">Wikipedia entry</a>.
     </strong>
